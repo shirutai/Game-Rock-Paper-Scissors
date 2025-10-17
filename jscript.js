@@ -58,13 +58,13 @@ function playGame() {
         playRound(userChoice, computerChoice);
     }
     if (humanScore > computerScore) {
-        console.log("You won! Final score is Humans" + " " + humanScore + " " + "Robots" + " " + computerScore);
+        alert("You won! Final score is Humans" + " " + humanScore + " " + "Robots" + " " + computerScore);
     }
     else if(humanScore === computerScore) {
-        console.log("Draw! Final score is Humans" + " " + humanScore + " " + "Robots" + " " + computerScore)
+        alert("Draw! Final score is Humans" + " " + humanScore + " " + "Robots" + " " + computerScore)
     }
     else {
-        console.log("You lost! Final score is Humans" + " " + humanScore + " " + "Robots" + " " + computerScore)
+        alert("You lost! Final score is Humans" + " " + humanScore + " " + "Robots" + " " + computerScore)
     }
 }
 
