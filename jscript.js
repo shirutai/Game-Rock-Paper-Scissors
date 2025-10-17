@@ -50,3 +50,22 @@ function playRound(user, computer) {
     
 
 }
+
+function playGame() {
+    for(let i = 0; i <5; i++){
+        const userChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+        playRound(userChoice, computerChoice);
+    }
+    if (humanScore > computerScore) {
+        console.log("You won! Final score is Humans" + " " + humanScore + " " + "Robots" + " " + computerScore);
+    }
+    else if(humanScore === computerScore) {
+        console.log("Draw! Final score is Humans" + " " + humanScore + " " + "Robots" + " " + computerScore)
+    }
+    else {
+        console.log("You lost! Final score is Humans" + " " + humanScore + " " + "Robots" + " " + computerScore)
+    }
+}
+
+playGame();
