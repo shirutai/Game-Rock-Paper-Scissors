@@ -18,3 +18,35 @@ function getComputerChoice() {
 let humanScore = 0;
 
 let computerScore = 0;
+
+
+function playRound(user, computer) {
+    console.log(user, computer);
+    if(user === computer){
+        console.log(`Humans ${humanScore} Robots ${computerScore}`);
+        console.log(`We have a draw, you both chose ${user.charAt(0).toUpperCase() + user.slice(1)}`);
+    }
+    else if(user === "rock" && computer == 'scissors' || user === "paper" && computer === "rock" || user === "scissors" && computer === "paper") {
+        ++humanScore;
+        console.log(`Humans ${humanScore} Robots ${computerScore}`);
+            if (user === "scissors") {
+            console.log(`You win! ${user.at(0).toUpperCase() + user.slice(1) + " " + "beat" + " " + computer.at(0).toUpperCase() + computer.slice(1)}`);
+            }
+            else {
+            console.log(`You win! ${user.at(0).toUpperCase() + user.slice(1) + " " + "beats" + " " + computer.at(0).toUpperCase() + computer.slice(1)}`);
+            }
+
+    }
+    else {
+        ++computerScore;
+        console.log(`Humans ${humanScore} Robots ${computerScore}`);
+        if (computer === "scissors"){
+            console.log(`You lose! ${computer.at(0).toUpperCase() + computer.slice(1) + " " + "beat" + " " + user.at(0).toUpperCase() + user.slice(1)}`)
+        }
+        else {
+            console.log(`You lose! ${computer.at(0).toUpperCase() + computer.slice(1) + " " + "beats" + " " + user.at(0).toUpperCase() + user.slice(1)}`)
+        }
+    }
+    
+
+}
